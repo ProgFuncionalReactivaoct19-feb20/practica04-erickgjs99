@@ -26,7 +26,13 @@ print(list(country))
 funcion3 = list(map(lambda x: list(x.items()) [2][1], line_dic))
 minimo_p = min(funcion3)
 maximo_p = max(funcion3) 
-#impresion de los resultados del minimo peso
-print((minimo_p))
-#impresion de los resultados del maximo peso
-print((maximo_p))  
+funcion4 =  lambda x: list(x.items())[2][1] == minimo_p
+funcion5 =  lambda x: list(x.items())[2][1] == maximo_p
+est_min = list(filter(funcion4, line_dic))
+est_max = list(filter(funcion5, line_dic))
+print("jugador con minima estatura")
+#impresion de los resultados del minimo altura
+print((est_min))
+#impresion de los resultados del maxima altura
+print(("jugador con maxima estatura "))  
+print((est_max))  
